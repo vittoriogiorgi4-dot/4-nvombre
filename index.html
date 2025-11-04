@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form e Contatore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f7f7f7;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    input {
+      padding: 8px;
+      font-size: 14px;
+    }
+    button {
+      margin-left: 6px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button.save {
+      background-color: #4CAF50;
+      color: white;
+    }
+    button.remove {
+      background-color: #f44336;
+      color: white;
+    }
+    .saved-value {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .counter {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="savedValue" class="saved-value"></div>
+    
+    <input type="text" id="nameInput" placeholder="Inserisci il tuo nome">
+    <button class="save" id="saveBtn">Salva</button>
+    <button class="remove" id="removeBtn">Rimuovi</button>
+
+    <div class="counter">
+      Tempo trascorso in questa sessione: <span id="timer">0</span> secondi
+    </div>
+  </div>
+
+  <!-- Collegamento al file JS -->
+  <script src="script.js"></script>
+</body>
+</html>
